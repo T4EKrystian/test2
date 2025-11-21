@@ -3,18 +3,17 @@ import React from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Philosophy from './components/Philosophy';
-import History from './components/History';
 import CourseDetails from './components/CourseDetails';
-import Signature from './components/Signature';
-import Residences from './components/Residences';
+import History from './components/History';
 import Features from './components/Features';
-import Gallery from './components/Gallery';
-import Events from './components/Events';
-import Membership from './components/Membership';
+import Residences from './components/Residences';
 import Dining from './components/Dining';
+import Membership from './components/Membership';
+import Events from './components/Events';
+import Gallery from './components/Gallery';
+import Testimonials from './components/Testimonials';
 import Footer from './components/Footer';
 import AiConcierge from './components/AiConcierge';
-import Testimonials from './components/Testimonials';
 
 function App() {
   const openBooking = () => {
@@ -29,7 +28,6 @@ function App() {
         <Philosophy />
         <CourseDetails />
         <History />
-        <Signature />
         <Features />
         <Residences />
         <Dining />

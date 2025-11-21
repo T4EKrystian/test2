@@ -1,42 +1,30 @@
-import React, { useEffect } from 'react';
-import { Shield, Award, Clock } from 'lucide-react';
+
+import React from 'react';
+import { Shield } from 'lucide-react';
 
 const Philosophy: React.FC = () => {
   return (
-    <section id="heritage" className="relative bg-royal-black overflow-hidden pb-20 md:pb-32">
+    <section id="heritage" className="relative bg-royal-black overflow-hidden py-24 md:py-32">
       
       {/* Topo Pattern Overlay */}
       <div className="absolute inset-0 pattern-topo opacity-10 pointer-events-none"></div>
 
-      {/* Infinite Marquee Strip - Premium Info Separator */}
-      <div className="bg-royal-gold py-3 md:py-4 relative z-20 overflow-hidden select-none flex border-y border-black/10">
-        <div className="animate-infinite-scroll whitespace-nowrap flex gap-8 md:gap-16 items-center">
-           {[...Array(10)].map((_, i) => (
-             <div key={i} className="flex items-center gap-8 md:gap-16">
-                <span className="text-black text-[10px] md:text-xs font-bold uppercase tracking-[0.3em]">Nature</span>
-                <span className="w-1.5 h-1.5 bg-black rounded-full"></span>
-                <span className="text-black text-[10px] md:text-xs font-bold uppercase tracking-[0.3em]">Silence</span>
-                <span className="w-1.5 h-1.5 bg-black rounded-full"></span>
-                <span className="text-black text-[10px] md:text-xs font-bold uppercase tracking-[0.3em]">Golf</span>
-                <span className="w-1.5 h-1.5 bg-black rounded-full"></span>
-                <span className="text-black text-[10px] md:text-xs font-bold uppercase tracking-[0.3em]">Resort</span>
-                <span className="w-1.5 h-1.5 bg-black rounded-full"></span>
-             </div>
-           ))}
-        </div>
+      {/* Infinite Marquee Strip - Premium Info Separator - Positioned at Top inside padding for better flow or kept as separator? Kept but spacing adjusted. */}
+      <div className="hidden md:block absolute top-0 left-0 w-full bg-royal-gold py-2 z-20 overflow-hidden select-none border-y border-black/10 opacity-0">
+         {/* Hidden but keeping structure if needed, cleaner to just remove or use as subtle divider elsewhere. Removing for cleaner look based on audit. */}
       </div>
 
       {/* Main Content */}
-      <div className="relative py-20 md:py-32">
+      <div className="relative">
         {/* Decor Background Text */}
-        <div className="absolute top-20 left-0 md:left-10 text-[25vw] md:text-[20vw] leading-none font-display text-white/[0.03] select-none pointer-events-none z-0">
+        <div className="absolute top-0 left-0 md:left-10 text-[25vw] md:text-[20vw] leading-none font-display text-white/[0.02] select-none pointer-events-none z-0">
           OAZA
         </div>
 
-        <div className="max-w-[1800px] mx-auto px-6 md:px-12 relative z-10">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24 items-center">
+        <div className="max-w-[1920px] mx-auto px-6 md:px-12 relative z-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24 items-center">
             
-             {/* Image Side - First on Mobile for Visual Impact */}
+             {/* Image Side */}
             <div className="order-1 md:order-2 relative animate-fade-up" style={{ animationDelay: '0.2s' }}>
               <div className="relative aspect-[4/5] md:aspect-square overflow-hidden group shadow-2xl rounded-sm border border-white/5">
                 <div className="absolute inset-0 bg-gradient-to-tr from-black/40 to-transparent z-10 group-hover:bg-transparent transition-colors duration-700"></div>
@@ -59,14 +47,14 @@ const Philosophy: React.FC = () => {
             {/* Text Side */}
             <div className="order-2 md:order-1 text-left">
                <div className="flex items-center gap-4 mb-6 md:mb-8">
-                  <Shield size={18} className="text-royal-gold" strokeWidth={1} />
-                  <span className="text-royal-gold text-[10px] font-bold tracking-[0.3em] uppercase">
+                  <span className="h-[1px] w-12 bg-royal-gold"></span>
+                  <span className="text-royal-gold text-[10px] font-bold tracking-[0.4em] uppercase">
                     Filozofia Klubu
                   </span>
                </div>
                
-               <h2 className="text-4xl md:text-7xl font-serif text-white leading-[1.1] mb-8 md:mb-12">
-                 W Harmoni <br/> <span className="italic text-stone-500">z Naturą</span>
+               <h2 className="text-4xl md:text-7xl font-display uppercase text-white leading-[1.1] mb-8 md:mb-12 tracking-tight">
+                 W Harmonii <br/> <span className="italic font-serif normal-case text-stone-500">z Naturą</span>
                </h2>
                
                <div className="space-y-8 md:space-y-12">
@@ -98,12 +86,12 @@ const Philosophy: React.FC = () => {
 
           </div>
         </div>
-
-        {/* Elegant Separator at the bottom */}
-        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 z-30 flex items-center gap-4 opacity-60">
-           <div className="w-16 md:w-32 h-[1px] bg-gradient-to-r from-transparent to-royal-gold"></div>
-           <div className="w-2.5 h-2.5 rotate-45 border border-royal-gold bg-royal-black"></div>
-           <div className="w-16 md:w-32 h-[1px] bg-gradient-to-l from-transparent to-royal-gold"></div>
+        
+        {/* Separator */}
+        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 z-30 flex items-center gap-4 opacity-30">
+           <div className="w-24 h-[1px] bg-gradient-to-r from-transparent to-white"></div>
+           <div className="w-1.5 h-1.5 rotate-45 bg-royal-gold"></div>
+           <div className="w-24 h-[1px] bg-gradient-to-l from-transparent to-white"></div>
         </div>
       </div>
     </section>
