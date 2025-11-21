@@ -1,10 +1,9 @@
-
 import React, { useEffect } from 'react';
 import { Shield, Award, Clock } from 'lucide-react';
 
 const Philosophy: React.FC = () => {
   return (
-    <section id="heritage" className="relative bg-royal-black overflow-hidden">
+    <section id="heritage" className="relative bg-royal-black overflow-hidden pb-20 md:pb-32">
       
       {/* Topo Pattern Overlay */}
       <div className="absolute inset-0 pattern-topo opacity-10 pointer-events-none"></div>
@@ -49,9 +48,9 @@ const Philosophy: React.FC = () => {
                 
                 {/* Floating Caption Card */}
                 <div className="absolute bottom-0 right-0 md:-left-12 md:bottom-8 bg-[#0F0F0F]/95 backdrop-blur-xl p-6 md:p-8 max-w-[240px] md:max-w-[260px] z-20 border border-white/10 shadow-2xl text-left">
-                  <p className="text-royal-gold font-serif italic text-lg md:text-xl mb-2 md:mb-3">"The Sanctuary"</p>
-                  <p className="text-[10px] md:text-xs text-gray-400 uppercase tracking-widest leading-relaxed">
-                    Unikalny mikroklimat stworzony przez tysiące roślin. Graj w ciszy.
+                  <p className="text-royal-gold font-serif italic text-lg mb-2">11 000 Drzew</p>
+                  <p className="text-stone-400 text-xs leading-relaxed font-light">
+                    Parkowy charakter pola zapewnia intymność gry i niezwykłe doznania estetyczne o każdej porze roku.
                   </p>
                 </div>
               </div>
@@ -59,64 +58,54 @@ const Philosophy: React.FC = () => {
 
             {/* Text Side */}
             <div className="order-2 md:order-1 text-left">
-              <div className="animate-fade-up">
-                <span className="text-royal-gold text-[10px] md:text-xs font-bold tracking-[0.3em] md:tracking-[0.4em] uppercase block mb-4 md:mb-6 flex items-center gap-3">
-                   <Shield size={14} />
-                   Charakter Pola
-                </span>
-                <h2 className="text-4xl md:text-6xl font-serif text-white mb-6 md:mb-10 leading-[1.1]">
-                  Golf w sercu <br /> <span className="italic text-royal-gold">natury.</span>
-                </h2>
-                
-                <div className="space-y-6 text-stone-400 font-light leading-loose text-sm md:text-lg max-w-xl border-l border-white/10 pl-6">
-                  <p>
-                    Sierra Golf Resort to mistrzowskie pole typu <span className="text-white font-medium">"Parkland"</span>. 
-                    To oaza spokoju, gdzie 11 000 drzew tworzy naturalne ściany dla każdego z 18 dołków.
-                  </p>
-                  <p>
-                    Znajdujemy się w Pętkowicach, zaledwie 25 minut drogi od Trójmiasta. 
-                    To idealne miejsce na ucieczkę od zgiełku miasta, bez konieczności dalekiej podróży.
-                  </p>
-                </div>
-              </div>
-              
-              {/* Info Grid */}
-              <div className="mt-10 md:mt-12 grid grid-cols-2 gap-6 md:gap-8 border-t border-white/10 pt-8">
-                <div className="flex gap-4 items-start group">
-                   <div className="p-3 bg-white/5 rounded-sm text-royal-gold group-hover:bg-royal-gold group-hover:text-black transition-colors">
-                      <Award size={20} />
-                   </div>
-                   <div>
-                      <span className="block text-lg md:text-xl font-display text-white mb-1">Klasa A</span>
-                      <span className="text-[9px] md:text-[10px] uppercase tracking-widest text-stone-500 leading-tight block">Standard Mistrzowski</span>
-                   </div>
-                </div>
-                <div className="flex gap-4 items-start group">
-                   <div className="p-3 bg-white/5 rounded-sm text-royal-gold group-hover:bg-royal-gold group-hover:text-black transition-colors">
-                      <Clock size={20} />
-                   </div>
-                   <div>
-                      <span className="block text-lg md:text-xl font-display text-white mb-1">4h 15min</span>
-                      <span className="text-[9px] md:text-[10px] uppercase tracking-widest text-stone-500 leading-tight block">Średni czas gry</span>
-                   </div>
-                </div>
-              </div>
+               <div className="flex items-center gap-4 mb-6 md:mb-8">
+                  <Shield size={18} className="text-royal-gold" strokeWidth={1} />
+                  <span className="text-royal-gold text-[10px] font-bold tracking-[0.3em] uppercase">
+                    Filozofia Klubu
+                  </span>
+               </div>
+               
+               <h2 className="text-4xl md:text-7xl font-serif text-white leading-[1.1] mb-8 md:mb-12">
+                 W Harmoni <br/> <span className="italic text-stone-500">z Naturą</span>
+               </h2>
+               
+               <div className="space-y-8 md:space-y-12">
+                 <div className="flex gap-6 group">
+                    <div className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center group-hover:border-royal-gold transition-colors duration-500 shrink-0">
+                       <span className="font-display text-xl text-white">01</span>
+                    </div>
+                    <div>
+                       <h3 className="text-white text-lg font-display uppercase tracking-widest mb-2">Cisza</h3>
+                       <p className="text-stone-400 text-sm leading-loose font-light max-w-md">
+                         Z dala od zgiełku miasta. Tutaj słychać tylko śpiew ptaków i uderzenie kija golfowego.
+                       </p>
+                    </div>
+                 </div>
+
+                 <div className="flex gap-6 group">
+                    <div className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center group-hover:border-royal-gold transition-colors duration-500 shrink-0">
+                       <span className="font-display text-xl text-white">02</span>
+                    </div>
+                    <div>
+                       <h3 className="text-white text-lg font-display uppercase tracking-widest mb-2">Jakość</h3>
+                       <p className="text-stone-400 text-sm leading-loose font-light max-w-md">
+                         Mistrzowskie utrzymanie greenów i fairwayów. Standard klasy A doceniany przez profesjonalistów.
+                       </p>
+                    </div>
+                 </div>
+               </div>
             </div>
 
           </div>
         </div>
+
+        {/* Elegant Separator at the bottom */}
+        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 z-30 flex items-center gap-4 opacity-60">
+           <div className="w-16 md:w-32 h-[1px] bg-gradient-to-r from-transparent to-royal-gold"></div>
+           <div className="w-2.5 h-2.5 rotate-45 border border-royal-gold bg-royal-black"></div>
+           <div className="w-16 md:w-32 h-[1px] bg-gradient-to-l from-transparent to-royal-gold"></div>
+        </div>
       </div>
-      
-      {/* Add custom keyframes for marquee if not in global css, injecting style tag here for component isolation */}
-      <style>{`
-        @keyframes infinite-scroll {
-          from { transform: translateX(0); }
-          to { transform: translateX(-50%); }
-        }
-        .animate-infinite-scroll {
-          animation: infinite-scroll 30s linear infinite;
-        }
-      `}</style>
     </section>
   );
 };

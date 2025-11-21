@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 const Events: React.FC = () => {
@@ -8,11 +7,14 @@ const Events: React.FC = () => {
       <div className="absolute inset-0 pattern-luxury opacity-[0.03] pointer-events-none"></div>
       <div className="absolute inset-0 border-y border-white/5 pointer-events-none"></div>
       
+      {/* Vertical Connector Line from Top */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 h-16 md:h-24 w-[1px] bg-gradient-to-b from-transparent via-royal-gold/50 to-transparent z-20"></div>
+      
       <div className="max-w-[1920px] mx-auto px-6 md:px-12 relative z-10">
         
         <div className="text-center mb-16 md:mb-24">
-           <span className="text-white/40 text-[10px] font-bold tracking-[0.4em] uppercase block mb-4">Celebrations</span>
-           <h2 className="text-4xl md:text-7xl font-display uppercase">
+           <span className="text-white/40 text-[10px] font-bold tracking-[0.4em] uppercase block mb-4 animate-fade-up">Celebrations</span>
+           <h2 className="text-4xl md:text-7xl font-display uppercase animate-fade-up">
              Sierra <span className="font-serif italic text-royal-gold lowercase">events</span>
            </h2>
         </div>

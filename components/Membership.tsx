@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Check } from 'lucide-react';
 
@@ -17,6 +16,8 @@ const Membership: React.FC = () => {
             className="w-full h-full object-cover opacity-20 mix-blend-overlay"
          />
          <div className="absolute inset-0 bg-gradient-to-b from-royal-black via-transparent to-royal-black"></div>
+         {/* Texture Overlay */}
+         <div className="absolute inset-0 pattern-diagonal opacity-5"></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
@@ -28,7 +29,8 @@ const Membership: React.FC = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
           {/* Card 1 */}
-          <div className="bg-[#121212]/80 backdrop-blur-md border border-white/5 p-8 md:p-10 hover:border-white/20 transition-all duration-500 group flex flex-col rounded-sm text-left shadow-xl">
+          <div className="bg-[#121212]/80 backdrop-blur-md border border-white/5 p-8 md:p-10 hover:border-white/20 transition-all duration-500 group flex flex-col rounded-sm text-left shadow-xl relative overflow-hidden">
+            <div className="absolute top-0 left-0 w-full h-1 bg-white/5 group-hover:bg-royal-gold/50 transition-colors"></div>
             <div className="mb-8">
                <h3 className="text-2xl font-display text-white mb-2">Academy</h3>
                <div className="text-royal-gold text-sm font-serif italic">Dla początkujących</div>
@@ -65,7 +67,8 @@ const Membership: React.FC = () => {
           </div>
 
           {/* Card 3 */}
-          <div className="bg-[#121212]/80 backdrop-blur-md border border-white/5 p-8 md:p-10 hover:border-white/20 transition-all duration-500 group flex flex-col rounded-sm text-left shadow-xl">
+          <div className="bg-[#121212]/80 backdrop-blur-md border border-white/5 p-8 md:p-10 hover:border-white/20 transition-all duration-500 group flex flex-col rounded-sm text-left shadow-xl relative overflow-hidden">
+             <div className="absolute top-0 left-0 w-full h-1 bg-white/5 group-hover:bg-royal-gold/50 transition-colors"></div>
             <div className="mb-8">
                <h3 className="text-2xl font-display text-white mb-2">Business</h3>
                <div className="text-royal-gold text-sm font-serif italic">Corporate</div>
