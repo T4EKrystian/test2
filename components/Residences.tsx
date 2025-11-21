@@ -28,7 +28,7 @@ const Residences: React.FC = () => {
   };
 
   return (
-    <section id="residences" className="bg-white pattern-paper text-royal-black py-20 md:py-32 relative overflow-hidden">
+    <section id="residences" className="pattern-paper text-royal-black py-20 md:py-32 relative overflow-hidden">
       <div className="max-w-[1920px] mx-auto px-6 md:px-12 relative z-10">
         
         {/* Header Section - Strictly Left Aligned */}
