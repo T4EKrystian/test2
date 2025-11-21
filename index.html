@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pl" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sierra Golf Resort | Oaza spokoju koło Trójmiasta</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Montserrat:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+      :root {
+        --royal-gold: #C5A059;
+        --royal-gold-light: #E5C585;
+        --royal-black: #050505;
+        --royal-charcoal: #0F0F0F;
+        --royal-green: #1A2E1F;
+      }
+      
+      body {
+        font-family: 'Montserrat', sans-serif;
+        background-color: var(--royal-black);
+        color: #f5f5f4;
+        overflow-x: hidden;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+      }
+      
+      h1, h2, h3, h4 {
+        font-family: 'Cormorant Garamond', serif;
+      }
+      
+      .font-display {
+        font-family: 'Cinzel', serif;
+      }
+      
+      /* Premium Scrollbar */
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #050505; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #222; 
+        border-radius: 3px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: var(--royal-gold); 
+      }
+
+      /* Text Effects */
+      .text-gradient-gold {
+        background: linear-gradient(to right, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        background-size: 200% auto;
+        animation: shine 8s linear infinite;
+      }
+
+      @keyframes shine {
+        to {
+          background-position: 200% center;
+        }
+      }
+
+      /* Utilities & Patterns */
+      .grain {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 9990;
+        opacity: 0.03;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+      }
+
+      .pattern-grid {
+        background-image: radial-gradient(rgba(197, 160, 89, 0.15) 1px, transparent 1px);
+        background-size: 40px 40px;
+      }
+      
+      /* Sophisticated Reveal Animation */
+      .reveal-text {
+        position: relative;
+        overflow: hidden;
+      }
+      
+      .reveal-text span {
+        display: inline-block;
+        transform: translateY(100%);
+        opacity: 0;
+        animation: revealUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      }
+      
+      @keyframes revealUp {
+        from {
+          transform: translateY(100%);
+          opacity: 0;
+        }
+        to {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+
+      .pattern-luxury {
+        background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
+      }
+
+      /* Animation Utilities */
+      @keyframes fadeUp {
+        from { opacity: 0; transform: translateY(40px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      
+      .animate-fade-up {
+        animation: fadeUp 1.2s cubic-bezier(0.2, 1, 0.3, 1) forwards;
+      }
+
+      /* Initial Loader */
+      .initial-loader {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+      }
+      .loader-line {
+        width: 1px;
+        height: 60px;
+        background: linear-gradient(to bottom, transparent, var(--royal-gold), transparent);
+        animation: slideDown 1.5s infinite;
+      }
+      @keyframes slideDown {
+        0% { transform: scaleY(0); transform-origin: top; }
+        50% { transform: scaleY(1); transform-origin: top; }
+        51% { transform: scaleY(1); transform-origin: bottom; }
+        100% { transform: scaleY(0); transform-origin: bottom; }
+      }
+      
+      /* Hide scrollbar for horizontal scrolling areas */
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+    </style>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              serif: ['"Cormorant Garamond"', 'serif'],
+              sans: ['"Montserrat"', 'sans-serif'],
+              display: ['"Cinzel"', 'serif'],
+            },
+            colors: {
+              'royal-black': '#050505',
+              'royal-charcoal': '#0F0F0F',
+              'royal-gold': '#C5A059',
+              'royal-gold-light': '#E5C585',
+              'royal-green': '#1A2E1F',
+            },
+            letterSpacing: {
+              'widest-xl': '0.35em',
+              'widest-2xl': '0.5em',
+            },
+            animation: {
+              'spin-slow': 'spin 12s linear infinite',
+              'fade-up': 'fadeUp 1.2s cubic-bezier(0.2, 1, 0.3, 1) forwards',
+            }
+          }
+        }
+      }
+    </script>
+    <script type="importmap">
+    {
+      "imports": {
+        "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+        "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
+        "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+        "react/": "https://aistudiocdn.com/react@^19.2.0/",
+        "react": "https://aistudiocdn.com/react@^19.2.0"
+      }
+    }
+    </script>
+  </head>
+  <body class="bg-royal-black text-white antialiased selection:bg-royal-gold selection:text-black">
+    <div class="grain"></div>
+    <div id="root">
+      <div class="initial-loader">
+        <div class="loader-line"></div>
+        <p style="font-family: 'Cinzel', serif; letter-spacing: 0.3em; font-size: 0.7rem; color: #666; text-transform: uppercase;">Sierra Resort</p>
+      </div>
+    </div>
+    <script type="module" src="./index.tsx"></script>
+  </body>
+</html>
